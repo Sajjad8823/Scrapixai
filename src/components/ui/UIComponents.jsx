@@ -132,8 +132,24 @@ export function GradText({ children, gradient, className = '', tag = 'span', sty
 export function TeamAvatar({ member, size = 80 }) {
   const { theme } = useTheme();
   if (member.image) {
-    return <img src={`/images/team/${member.image}`} alt={member.name}
-      style={{ width: size, height: size, borderRadius: '50%', objectFit: 'cover', border: `3px solid ${theme.primary}55`, boxShadow: `0 0 20px ${theme.primary}44` }} />;
+    return (
+      <img
+        src={`/images/team/${member.image}`}
+        alt={member.name}
+        style={{
+          width: size,
+          height: size,
+          borderRadius: '50%',
+          objectFit: 'contain',
+          objectPosition: 'center',
+          display: 'block',
+          backgroundColor: theme.bg3,
+          border: `3px solid ${theme.primary}55`,
+          boxShadow: `0 0 20px ${theme.primary}44`,
+          padding: 2,
+        }}
+      />
+    );
   }
   return (
     <div style={{ width: size, height: size, borderRadius: '50%', background: member.gradient || theme.grad, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Space Grotesk',sans-serif", fontWeight: 800, color: '#fff', fontSize: size * .32, boxShadow: `0 4px 20px ${theme.primary}44`, flexShrink: 0 }}>
