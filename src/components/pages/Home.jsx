@@ -68,7 +68,7 @@ function Hero() {
         >
           {/* Line 1 — plain */}
           <div style={{
-            fontFamily: 'sans-serif',
+            fontFamily: "'Outfit',sans-serif",
             fontSize: 'clamp(36px, 7vw, 80px)',
             lineHeight: 1.05,
             letterSpacing: '0.02em',
@@ -80,7 +80,7 @@ function Hero() {
 
           {/* Line 2 — solid color with glow (no gradient clip) */}
           <div style={{
-            fontFamily: 'sans-serif',
+            fontFamily: "'Outfit',sans-serif",
             fontSize: 'clamp(36px, 7vw, 80px)',
             lineHeight: 1.05,
             letterSpacing: '0.02em',
@@ -98,8 +98,7 @@ function Hero() {
           transition={{ duration:.6, delay:.38 }}
           style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'clamp(15px,2vw,18px)', color:theme.textMuted, maxWidth:560, margin:'0 auto 36px', lineHeight:1.8 }}
         >
-          We turn your data into powerful AI-driven systems. Delivering automation solutions that boost performance, reduce costs and give you a lasting edge.
-          End-to-end web, mobile and ERP development engineered for performance and long-term growth.
+          From data scraping to custom AI models — we engineer production-ready automation systems that compound your competitive advantage.
         </motion.p>
 
         {/* Capability chip — rotating */}
@@ -122,7 +121,7 @@ function Hero() {
           <div style={{ height:1, width:40, background:theme.borderSubtle }} />
         </motion.div>
 
-        {/* CTA buttons
+        {/* CTA buttons */}
         <motion.div
           initial={{ opacity:0, y:16 }} animate={{ opacity:1, y:0 }}
           transition={{ delay:.55, duration:.55 }}
@@ -158,7 +157,7 @@ function Hero() {
               <FaPlay style={{ fontSize:11, opacity:.7 }} /> View Our Work
             </Link>
           </motion.div>
-        </motion.div> */}
+        </motion.div>
 
         {/* Stats row */}
         <motion.div
@@ -182,7 +181,7 @@ function Hero() {
                 minWidth:80, flex:'1 1 80px', maxWidth:160,
               }}
             >
-              <span style={{ fontFamily:'sans-serif', fontSize:'clamp(20px,3.5vw,30px)', color:c, lineHeight:1, textShadow:`0 0 20px ${c}55` }}>{v}</span>
+              <span style={{ fontFamily:"'Outfit',sans-serif", fontSize:'clamp(20px,3.5vw,30px)', color:c, lineHeight:1, textShadow:`0 0 20px ${c}55` }}>{v}</span>
               <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'clamp(9px,1.2vw,11px)', color:theme.textFaint, marginTop:4, textAlign:'center', letterSpacing:'.04em' }}>{l}</span>
             </motion.div>
           ))}
@@ -229,7 +228,7 @@ function ServiceCard({ s, i }) {
       <div style={{ position:'absolute', top:0, left:0, right:0, height:3, background:s.gradient, opacity: hov ? 1 : 0.5, borderRadius:'20px 20px 0 0', transition:'opacity .3s' }} />
 
       {/* Ghost index */}
-      <div style={{ position:'absolute', top:12, right:16, fontFamily:'sans-serif', fontSize:56, color:s.color, opacity:.05, lineHeight:1, userSelect:'none' }}>
+      <div style={{ position:'absolute', top:12, right:16, fontFamily:"'Outfit',sans-serif", fontSize:56, color:s.color, opacity:.05, lineHeight:1, userSelect:'none' }}>
         {String(i+1).padStart(2,'0')}
       </div>
 
@@ -266,7 +265,7 @@ function ServicesPreview() {
             <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontWeight:700, fontSize:11, letterSpacing:'.14em', color:theme.secondary }}>◆ WHAT WE BUILD</div>
             <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'space-between', flexWrap:'wrap', gap:16 }}>
               {/* ✅ FIXED: Solid color with glow instead of gradient clip */}
-              <h2 style={{ fontFamily:'sans-serif', fontSize:'clamp(30px,5.5vw,58px)', color:theme.textPrimary, lineHeight:1, letterSpacing:'.02em', margin:0 }}>
+              <h2 style={{ fontFamily:"'Outfit',sans-serif", fontSize:'clamp(30px,5.5vw,58px)', color:theme.textPrimary, lineHeight:1, letterSpacing:'.02em', margin:0 }}>
                 Our{' '}
                 <span style={{ color: theme.primary, textShadow: `0 0 30px ${theme.primary}44` }}>
                   AI Services
@@ -358,7 +357,7 @@ function CertCard({ cert, i }) {
           </div>
         </motion.div>
 
-        <div style={{ fontFamily:'sans-serif', fontWeight:900, fontSize:'clamp(18px,2.8vw,24px)', color: hov ? cert.color : theme.textPrimary, letterSpacing:'.04em', marginBottom:6, transition:'color .25s' }}>
+        <div style={{ fontFamily:"'Outfit',sans-serif", fontSize:'clamp(18px,2.8vw,24px)', color: hov ? cert.color : theme.textPrimary, letterSpacing:'.04em', marginBottom:6, transition:'color .25s' }}>
           {cert.title}
         </div>
         <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontWeight:600, fontSize:10, letterSpacing:'.14em', color:theme.textFaint, marginBottom: cert.btnText ? 20 : 0 }}>
@@ -392,7 +391,7 @@ function Certifications() {
               <FaShieldAlt style={{ fontSize:11 }} /> TRUSTED & VERIFIED
             </div>
             {/* ✅ FIXED: Solid color with glow instead of gradient clip */}
-            <h2 style={{ fontFamily:'sans-serif', fontSize:'clamp(28px,5vw,56px)', color:theme.textPrimary, lineHeight:1, marginBottom:14, letterSpacing:'.02em' }}>
+            <h2 style={{ fontFamily:"'Outfit',sans-serif", fontSize:'clamp(28px,5vw,56px)', color:theme.textPrimary, lineHeight:1, marginBottom:14, letterSpacing:'.02em' }}>
               Our{' '}
               <span style={{ color: theme.accent, textShadow: `0 0 30px ${theme.accent}44` }}>
                 Certifications
@@ -429,6 +428,44 @@ function Certifications() {
 /* ══════════════════════════════════════════════════════════════════
    METRICS + CTA
 ══════════════════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════════════════
+   FOUNDER TEASER
+   - Builds trust since there's no physical office — puts a real face
+     and name behind the company right on the homepage.
+══════════════════════════════════════════════════════════════════ */
+function FounderTeaser() {
+  const { theme } = useTheme();
+  return (
+    <section style={{ background:theme.bg, padding:'clamp(64px,9vw,100px) clamp(16px,5vw,48px)', position:'relative', overflow:'hidden' }}>
+      <div style={{ position:'absolute', top:0, left:0, right:0, height:1, background:`linear-gradient(90deg,transparent,${theme.secondary}44,transparent)` }} />
+      <div style={{ maxWidth:1100, margin:'0 auto', display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(260px,100%),1fr))', gap:'clamp(32px,5vw,56px)', alignItems:'center' }}>
+        <Reveal>
+          <div style={{ position:'relative', maxWidth:340, margin:'0 auto' }}>
+            <div style={{ position:'absolute', inset:-10, background:`linear-gradient(135deg,${theme.primary}33,${theme.accent}22)`, borderRadius:26, filter:'blur(18px)' }} />
+            <img
+              src="/images/sajjad-working.jpg"
+              alt="Sajjad Hussain — Founder, ScrapixAI"
+              style={{ position:'relative', width:'100%', borderRadius:22, border:`1px solid ${theme.borderColor}`, display:'block', objectFit:'cover', aspectRatio:'4/5' }}
+            />
+          </div>
+        </Reveal>
+        <Reveal delay={.15}>
+          <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontWeight:700, fontSize:11, letterSpacing:'.14em', color:theme.primary, marginBottom:12 }}>◆ MEET THE FOUNDER</div>
+          <h2 style={{ fontFamily:"'Outfit',sans-serif", fontSize:'clamp(24px,4vw,42px)', color:theme.textPrimary, lineHeight:1.1, letterSpacing:'.01em', margin:'0 0 16px' }}>
+            Hi, I'm <span style={{ color:theme.primary }}>Sajjad Hussain</span>
+          </h2>
+          <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'clamp(13px,2vw,16px)', color:theme.textMuted, lineHeight:1.85, maxWidth:520, margin:'0 0 24px' }}>
+            I founded ScrapixAI to help businesses cut out manual work with real, working AI and automation systems — not slideware. I lead a lean team of engineers and specialists personally on every project, so you always know who's building your system.
+          </p>
+          <Link to="/about" style={{ display:'inline-flex', alignItems:'center', gap:8, padding:'clamp(12px,2vw,15px) clamp(24px,4vw,32px)', borderRadius:14, background:theme.grad, color:theme.btnText, fontFamily:'Space Grotesk,sans-serif', fontWeight:800, fontSize:'clamp(13px,2vw,14px)', letterSpacing:'.03em', textDecoration:'none', boxShadow:`0 8px 28px ${theme.primary}40` }}>
+            More About Me &amp; The Team <FaArrowRight style={{ fontSize:12 }} />
+          </Link>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 function TrustSection() {
   const { theme } = useTheme();
   return (
@@ -440,10 +477,10 @@ function TrustSection() {
           <div style={{ marginBottom:'clamp(40px,6vw,60px)' }}>
             <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontWeight:700, fontSize:11, letterSpacing:'.14em', color:theme.accent, marginBottom:12 }}>◆ BY THE NUMBERS</div>
             {/* ✅ FIXED: Solid color with glow instead of gradient clip */}
-            <h2 style={{ fontFamily:'sans-serif', fontSize:'clamp(28px,5vw,56px)', color:theme.textPrimary, lineHeight:1, letterSpacing:'.02em', margin:0 }}>
-              Where Performance {' '}
+            <h2 style={{ fontFamily:"'Outfit',sans-serif", fontSize:'clamp(28px,5vw,56px)', color:theme.textPrimary, lineHeight:1, letterSpacing:'.02em', margin:0 }}>
+              Results That{' '}
               <span style={{ color: theme.accent, textShadow: `0 0 30px ${theme.accent}44` }}>
-               Meets Proof
+                Speak
               </span>
             </h2>
           </div>
@@ -479,14 +516,14 @@ function TrustSection() {
             <div style={{ display:'flex', flexDirection:'column', gap:24, position:'relative', zIndex:1 }}>
               <div>
                 {/* ✅ FIXED: Solid color with glow instead of gradient clip */}
-                <h2 style={{ fontFamily:'sans-serif', fontSize:'clamp(24px,5vw,48px)', color:theme.textPrimary, lineHeight:1, marginBottom:14, letterSpacing:'.02em' }}>
+                <h2 style={{ fontFamily:"'Outfit',sans-serif", fontSize:'clamp(24px,5vw,48px)', color:theme.textPrimary, lineHeight:1, marginBottom:14, letterSpacing:'.02em' }}>
                   Ready to Automate Your{' '}
                   <span style={{ color: theme.primary, textShadow: `0 0 30px ${theme.primary}44` }}>
                     Operations?
                   </span>
                 </h2>
                 <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:'clamp(13px,2vw,16px)', color:theme.textMuted, maxWidth:520, lineHeight:1.8, margin:0 }}>
-                  Schedule a free 45-min audit. We will identify your top automation opportunities and build an ROI roadmap at zero cost.
+                  Schedule a free 45-min audit. We will identify your top automation opportunities and build an ROI roadmap — at zero cost.
                 </p>
               </div>
 
@@ -494,12 +531,12 @@ function TrustSection() {
                 <motion.div whileHover={{ scale:1.03, y:-2 }} whileTap={{ scale:.97 }}>
                   <motion.a href="https://wa.me/923246664914" target="_blank" rel="noopener noreferrer" style={{ display:'inline-flex', alignItems:'center', gap:10, padding:'clamp(13px,2vw,16px) clamp(28px,4vw,44px)', borderRadius:14, background:theme.grad, color:theme.btnText, fontFamily:'Space Grotesk,sans-serif', fontWeight:800, fontSize:'clamp(13px,2vw,15px)', letterSpacing:'.04em', textDecoration:'none', boxShadow:`0 8px 32px ${theme.primary}50`, position:'relative', overflow:'hidden', whiteSpace:'nowrap' }}>
                     <motion.span animate={{ x:['-100%','200%'] }} transition={{ duration:2.5, repeat:Infinity, repeatDelay:2, ease:'linear' }} style={{ position:'absolute', inset:0, background:'linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent)', pointerEvents:'none' }} />
-                    💬 Book Free Consultation <FaArrowRight style={{ fontSize:13 }} />
+                    💬 WhatsApp Us Now <FaArrowRight style={{ fontSize:13 }} />
                   </motion.a>
                 </motion.div>
                 <motion.div whileHover={{ y:-2 }}>
-                  <Link to="/case-studies" style={{ display:'inline-flex', alignItems:'center', gap:8, padding:'clamp(13px,2vw,16px) clamp(24px,4vw,36px)', borderRadius:14, border:`1px solid ${theme.borderColor}`, background:theme.bgCard, color:theme.textSecondary, fontFamily:"'Space Grotesk',sans-serif", fontWeight:700, fontSize:'clamp(13px,2vw,15px)', textDecoration:'none', whiteSpace:'nowrap' }}>
-                    Read Case Studies
+                  <Link to="/portfolio" style={{ display:'inline-flex', alignItems:'center', gap:8, padding:'clamp(13px,2vw,16px) clamp(24px,4vw,36px)', borderRadius:14, border:`1px solid ${theme.borderColor}`, background:theme.bgCard, color:theme.textSecondary, fontFamily:"'Space Grotesk',sans-serif", fontWeight:700, fontSize:'clamp(13px,2vw,15px)', textDecoration:'none', whiteSpace:'nowrap' }}>
+                    View Our Work
                   </Link>
                 </motion.div>
               </div>
@@ -517,6 +554,7 @@ export default function Home() {
       <Hero />
       <ServicesPreview />
       <Certifications />
+      <FounderTeaser />
       <TrustSection />
     </>
   );

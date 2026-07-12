@@ -131,7 +131,7 @@ export default function Portfolio() {
             <div className="text-center mt-[clamp(40px,6vw,60px)]">
               <p className="mb-6" style={{ fontFamily: "'Plus Jakarta Sans',sans-serif", fontSize: 15, color: theme.textMuted }}>Want results like these for your business?</p>
               <motion.a href={WA} target="_blank" rel="noopener noreferrer" whileHover={{ y: -3, scale: 1.03 }} whileTap={{ scale: .97 }} className="btn-primary">
-                💬 WhatsApp Us Let's Build →
+                💬 WhatsApp Us — Let's Build →
               </motion.a>
             </div>
           </Reveal>

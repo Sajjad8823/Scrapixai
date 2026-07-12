@@ -114,7 +114,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.04, y: -1 }}
               whileTap={{ scale: 0.97 }}
             >
-              <Link
+              <a
                 href="https://wa.me/923246664914"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -126,8 +126,8 @@ export default function Navbar() {
                 }}
               >
                 <span className="shimmer-layer" />
-                💬 Book Free Consultation
-              </Link>
+                Free Consultation 
+              </a>
             </motion.div>
           </div>
           {/* Mobile hamburger */}
@@ -292,8 +292,8 @@ export default function Navbar() {
                 className="p-3.5 flex flex-col gap-2"
                 style={{ borderTop: `1px solid ${theme.borderSubtle}` }}
               >
-                <Link
-                  to="https://wa.me/923246664914"
+                <a
+                  href="https://wa.me/923246664914"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}
@@ -305,7 +305,7 @@ export default function Navbar() {
                   }}
                 >
                   💬 WhatsApp Us →
-                </Link>
+                </a>
                 <p
                   className="text-center font-body text-[11px]"
                   style={{ color: theme.textFaint }}

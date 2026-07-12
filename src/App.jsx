@@ -8,10 +8,7 @@ import ThemeSwitcher from './components/ui/ThemeSwitcher';
 import Home from './components/pages/Home';
 import Services from './components/pages/Services';
 import Portfolio from './components/pages/Portfolio';
-import CaseStudies from './components/pages/CaseStudies';
-import Blog from './components/pages/Blog';
 import About from './components/pages/About';
-import Team from './components/pages/Team';
 import Process from './components/pages/Process';
 import Contact from './components/pages/Contact';
 
@@ -26,11 +23,7 @@ function AppInner() {
           <Route path="/"             element={<Home />} />
           <Route path="/services"     element={<Services />} />
           <Route path="/portfolio"    element={<Portfolio />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/blog"         element={<Blog />} />
-          <Route path="/blog/:slug"   element={<Blog />} />
           <Route path="/about"        element={<About />} />
-          <Route path="/team"         element={<Team />} />
           <Route path="/process"      element={<Process />} />
           <Route path="/contact"      element={<Contact />} />
         </Routes>

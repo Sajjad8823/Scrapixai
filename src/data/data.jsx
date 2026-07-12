@@ -7,12 +7,9 @@ export const NAV_LINKS = [
   { label: "Home",         path: "/" },
   { label: "Services",     path: "/services" },
   { label: "Portfolio",    path: "/portfolio" },
-  { label: "Case Studies", path: "/case-studies" },
-  { label: "Blog",         path: "/blog" },
   { label: "About",        path: "/about" },
-  { label: "Contact",      path: "/contact" },
-  { label: "Our Team",     path: "/team" },
   { label: "Our Process",  path: "/process" },
+  { label: "Contact",      path: "/contact" },
 ];
 
 // ── SERVICE CATEGORIES ────────────────────────────────────────
@@ -518,84 +515,29 @@ export const CASE_STUDIES = [
     quote: "We went from guessing to knowing. Our pricing is now surgical — always competitive without eroding margin unnecessarily.",
     color: "#a855f7",
   },
-  // ================= CASE STUDY =================
-
-{
-  id: "saas-churn",
-  client: "Nova SaaS Platform",
-  industry: "Enterprise SaaS",
-  tag: "AI Retention Intelligence",
-  tagColor: "#10b981",
-
-  headline: "35% Reduction in Customer Churn Using Real-Time AI Behavioral Intelligence System",
-
-  problem: "Nova, a fast-scaling SaaS platform with 50K+ active users, was losing high-value customers due to late detection of churn signals. Their support system processed 10,000+ monthly interactions but lacked any predictive intelligence layer. As a result, churn was only identified after cancellation, leading to an estimated $1.2M annual revenue loss.",
-
-  approach: "We designed an AI-driven retention intelligence system powered by transformer-based NLP models. The system analyzed customer behavior, support conversations, and product usage patterns to generate real-time churn risk scores. High-risk accounts were automatically routed into proactive engagement workflows.",
-
-  execution: "Phase 1: Structured and labeled 18 months of historical customer interaction data. Phase 2: Trained and fine-tuned a BERT-based classification model for sentiment, intent, and churn prediction. Phase 3: Built a real-time scoring API using FastAPI integrated with HubSpot CRM. Phase 4: Deployed automated retention workflows with A/B tested intervention strategies and continuous model feedback loops.",
-
-  tools: [
-    "HuggingFace Transformers",
-    "PyTorch",
-    "FastAPI",
-    "HubSpot CRM API",
-    "Firebase Real-Time Database",
-    "Grafana Monitoring",
-    "AWS Infrastructure"
-  ],
-
-  results: [
-    { v: "35%", l: "Reduction in customer churn within 90 days" },
-    { v: "94.2%", l: "Model accuracy in churn prediction" },
-    { v: "<5ms", l: "Real-time risk scoring latency per request" },
-    { v: "$1.2M+", l: "Annual recurring revenue protected" }
-  ],
-
-  quote: "We moved from reactive support to predictive retention. Instead of losing customers, we now intervene before they even think about leaving.",
-
-  author: "James Park, Head of Product · Nova SaaS",
-
-  color: "#10b981"
-},
-  // ================= CASE STUDY =================
-
-{
-  id: "ai-assistant-realestate",
-  client: "Meridian Property Group",
-  industry: "Real Estate Operations",
-  tag: "AI Sales Automation",
-  tagColor: "#06b6d4",
-
-  headline: "AI-Powered WhatsApp Sales System Automatically Filters and Converts 300+ Property Leads Monthly",
-
-  problem: "Meridian Property Group’s sales team was overwhelmed with a high volume of inbound WhatsApp inquiries, most of which were unqualified or repetitive. With 12 agents handling conversations manually, nearly 70% of their time was spent answering basic questions instead of focusing on serious buyers, causing missed opportunities and delayed follow-ups.",
-
-  approach: "We developed an AI-driven conversational sales system integrated directly into WhatsApp, designed to act as a first-line property consultant. The system was trained on their full property database, pricing rules, FAQs, and buyer qualification criteria to intelligently filter, respond, and segment leads before human interaction.",
-
-  execution: "Phase 1: Structured property listings, FAQs, and buyer intent patterns into a searchable knowledge base. Phase 2: Built a context-aware LLM-based assistant using GPT architecture with custom prompt engineering for real estate conversations. Phase 3: Integrated WhatsApp Business API for real-time messaging and Supabase for lead storage and tracking. Phase 4: Deployed lead scoring logic and routed only high-intent users to human agents for closing.",
-
-  tools: [
-    "OpenAI GPT-4",
-    "LangChain Orchestration",
-    "WhatsApp Business API",
-    "Supabase Database",
-    "FastAPI Backend",
-    "Google Calendar API",
-    "Vector Search (Embeddings)"
-  ],
-
-  results: [
-    { v: "300+", l: "Qualified leads processed monthly" },
-    { v: "70%", l: "Reduction in agent workload" },
-    { v: "24/7", l: "Automated lead handling system" },
-    { v: "3x", l: "Increase in agent closing efficiency" }
-  ],
-
-  quote: "We stopped wasting time on unqualified chats. Now our agents only speak to serious buyers, and the AI handles everything else with consistent accuracy.",
-
-  color: "#06b6d4"
-},
+  {
+    id: "saas-churn", client: "", industry: "Software", tag: "NLP & Retention", tagColor: "#10b981",
+    headline: "35% Churn Reduction in 90 Days with NLP-Powered Customer Intelligence",
+    problem: "Nova received 10,000+ support messages monthly with no systematic way to identify at-risk customers until they had already churned. Their reactive approach was costing $1.2M ARR per year.",
+    approach: "Fine-tuned a BERT-based sentiment and intent classifier on 18 months of historical data. Built a real-time scoring system that flags at-risk accounts and triggers automated intervention sequences.",
+    execution: "Week 1: Data labelling and model training. Week 2: API build and HubSpot integration. Week 2: A/B testing of intervention sequences. Week 3: Monitoring and model improvement.",
+    tools: ["HuggingFace","PyTorch","FastAPI","HubSpot API","Firebase","Grafana"],
+    results: [{v:"35%",l:"Churn reduction"},{v:"94.2%",l:"Classification accuracy"},{v:"5ms",l:"Per message scored"},{v:"$1.2M",l:"ARR protected"}],
+    quote: "We went from reactive firefighting to proactive retention in 30 days. The model just gets smarter every week.",
+    author: "James Park, Head of Product · Nova SaaS",
+    color: "#10b981",
+  },
+  {
+    id: "ai-assistant-realestate", client: "oliviabyrne", industry: "Real Estate", tag: "AI Assistant", tagColor: "#06b6d4",
+    headline: "WhatsApp AI Assistant Qualifies 300+ Leads/Month While Agents Sleep",
+    problem: "Meridian's 12-agent team was drowning in unqualified leads. 70% of WhatsApp inquiries were basic questions that didn't require an agent's time.",
+    approach: "Built a custom WhatsApp AI assistant trained on their 200+ property listings, FAQ database and qualification criteria.",
+    execution: "Week 1: Knowledge base setup and conversation design. Week 1: Assistant training and integration. Week 2: Testing and agent training. Week 3: Launch and monitoring.",
+    tools: ["OpenAI GPT-4","LangChain","WhatsApp Business API","Google Calendar API","Supabase","FastAPI"],
+    results: [{v:"300+",l:"Leads/month qualified"},{v:"67%",l:"Agent time freed"},{v:"24/7",l:"Availability"},{v:"4.8/5",l:"Lead satisfaction"}],
+    quote: "Our agents now only talk to people who are ready to buy. The AI handles everything else — and does it better than most junior agents I've hired.",
+    color: "#06b6d4",
+  },
   {
     id: "meridian-health", client: "Meridian Health", industry: "Healthcare", tag: "AI Automation", tagColor: "#6366f1",
     headline: "From 6-Hour Batch to 11-Minute Real-Time Processing",
@@ -648,376 +590,354 @@ export const PROCESS_STEPS = [
 export const BLOG_POSTS = [
 
 // ================= AI (5) =================
-// ================= AI & AUTOMATION (5) =================
-
 {
  id: "ai-agents-operations",
  slug: "ai-agents-for-business-operations",
  category: "AI & Automation",
  categoryColor: "#6366f1",
- readTime: "9 min read",
- date: "April 2025",
- title: "AI Agents for Business Operations: How Intelligent Workflows Are Replacing Repetitive Teams",
- excerpt: "AI agents are evolving into autonomous digital workers that handle workflows, make decisions and reduce dependency on manual teams.",
- quote: "The future of operations is not replacement — it is intelligent delegation between humans and AI agents.",
- sections: [
- {heading:"What AI Agents Actually Do in Business",content:"AI agents go beyond chatbots by executing multi-step workflows, making rule-based decisions, integrating with APIs and coordinating tasks across systems without manual input."},
- {heading:"Where Enterprises Are Deploying Them",content:"Companies are using AI agents in customer support, internal operations, sales qualification, reporting automation, and workflow orchestration systems."},
- {heading:"Operational Cost Impact",content:"Organizations implementing agent-based systems are achieving significant reductions in manual workload, often improving operational efficiency by 30–60% depending on process maturity."},
- {heading:"Strategic Implementation Approach",content:"Successful adoption starts with a single high-volume repetitive workflow, then expands into multi-agent systems connected across departments."}
- ]
-},
-
-{
- id:"computer-vision-business",
- slug:"computer-vision-business-use-cases",
- category: "AI & Automation",
- categoryColor: "#4f46e5",
  readTime: "8 min read",
  date: "April 2025",
- title: "Computer Vision in Business: How AI Is Transforming Visual Data Into Decisions",
- excerpt: "Computer vision enables businesses to analyze images and video data at scale, unlocking automation and real-time insights.",
- quote: "Visual data is becoming one of the most valuable business assets in the digital economy.",
- sections:[
- {heading:"Automated Industrial Quality Control",content:"Manufacturing systems use computer vision to detect defects, ensure product consistency and reduce dependency on manual inspection teams."},
- {heading:"Retail Intelligence Systems",content:"Retailers analyze customer movement, engagement patterns, and shelf interaction to optimize store layouts and increase sales conversion."},
- {heading:"Document & Identity Processing",content:"OCR-powered vision systems extract structured data from invoices, IDs, contracts and forms with high accuracy and speed."},
- {heading:"Security and Real-Time Monitoring",content:"AI-powered surveillance systems detect anomalies, unauthorized access and operational risks in real time."}
+ title: "AI Agents for Business Operations: How Intelligent Workflows Are Replacing Repetitive Teams",
+ excerpt: "AI agents are moving beyond chatbots into autonomous operations. Here's how businesses are using them to reduce cost and scale faster.",
+ quote: "The future is not humans versus AI — it's humans managing AI agents.",
+ sections: [
+ {heading:"What Are AI Agents Really?",content:"AI agents can perform tasks, make decisions based on rules, trigger workflows and collaborate with tools without manual intervention."},
+ {heading:"Where Businesses Are Deploying Them",content:"Customer support, internal operations, lead qualification, data processing and automated decision systems are leading use cases."},
+ {heading:"Cost Reduction Potential",content:"Businesses implementing agent-driven workflows are reporting 30-60% operational efficiency gains."},
+ {heading:"How to Start Small",content:"Begin with a narrow use case such as ticket routing or reporting automation before scaling into multi-agent systems."}
  ]
 },
-
+{
+ id: "computer-vision-business",
+ slug: "computer-vision-business-use-cases",
+ category: "AI & Automation",
+ categoryColor: "#4f46e5",
+ readTime: "7 min read",
+ date: "April 2025",
+ title: "Computer Vision in Business: 5 Ways Companies Are Using AI to See and Analyze",
+ excerpt: "From quality inspection to retail analytics, computer vision is becoming a serious competitive advantage.",
+ quote: "Data isn't just text anymore — visual data is becoming business intelligence.",
+ sections:[
+ {heading:"Automated Quality Control",content:"Manufacturers are using computer vision to detect defects faster than human inspectors."},
+ {heading:"Retail Behavior Analysis",content:"Stores track customer movement and product engagement using vision systems."},
+ {heading:"Document Extraction",content:"Invoices, IDs and forms can be processed with OCR and vision models."},
+ {heading:"Security and Monitoring",content:"Smart surveillance systems now detect risks, patterns and anomalies automatically."}
+ ]
+},
 {
  id:"predictive-ai-analytics",
  slug:"predictive-ai-analytics-growth",
- category: "AI & Automation",
- categoryColor: "#7c3aed",
- readTime: "9 min read",
- date: "March 2025",
- title: "Predictive AI Analytics: Turning Business Data Into Future Decisions",
- excerpt: "Predictive analytics helps businesses forecast demand, reduce risk, and make proactive decisions using historical and real-time data.",
- quote: "Data without prediction is reporting — data with AI becomes decision intelligence.",
+ category:"AI & Automation",
+ categoryColor:"#7c3aed",
+ readTime:"8 min read",
+ date:"March 2025",
+ title:"Predictive AI Analytics: How Smart Forecasting Improves Business Decisions",
+ excerpt:"Predictive systems help companies anticipate churn, sales and demand before problems happen.",
+ quote:"Reactive businesses survive. Predictive businesses scale.",
  sections:[
- {heading:"Limitations of Traditional Forecasting",content:"Manual forecasting relies on static assumptions and cannot adapt to dynamic market changes or hidden behavioral patterns."},
- {heading:"Key Predictive Use Cases",content:"AI models are widely used for customer churn prediction, demand forecasting, revenue modeling and risk analysis."},
- {heading:"Data Quality Requirements",content:"Accurate predictions depend on clean historical data, continuous model training and proper feature engineering."},
- {heading:"Business Value and ROI",content:"Predictive systems reduce operational waste, improve planning accuracy and increase decision speed across business units."}
+ {heading:"Why Traditional Forecasting Fails",content:"Manual forecasting struggles with dynamic variables and hidden patterns."},
+ {heading:"AI Forecasting Applications",content:"Demand prediction, customer churn modeling and financial projections are major use cases."},
+ {heading:"Data Requirements",content:"Good predictive systems depend on clean historical data and continuous retraining."},
+ {heading:"ROI of Predictive Systems",content:"Many organizations reduce waste and improve planning accuracy after deployment."}
  ]
 },
-
 {
  id:"custom-ai-chatbots",
  slug:"custom-ai-chatbots-enterprise",
- category: "AI & Automation",
- categoryColor: "#8b5cf6",
- readTime: "7 min read",
- date: "March 2025",
- title: "Custom AI Chatbots for Enterprises: Beyond Basic Automation Tools",
- excerpt: "Enterprise AI chatbots now function as integrated business assistants connected to internal systems, not just conversational tools.",
- quote: "A chatbot becomes powerful when it becomes part of your business infrastructure.",
+ category:"AI & Automation",
+ categoryColor:"#8b5cf6",
+ readTime:"6 min read",
+ date:"March 2025",
+ title:"Custom AI Chatbots for Enterprises: Beyond Generic Assistants",
+ excerpt:"Enterprise chatbots now handle support, internal knowledge and process automation.",
+ quote:"A chatbot becomes valuable when it connects to business systems.",
  sections:[
- {heading:"Difference Between Generic and Custom AI Bots",content:"Generic bots answer questions, while custom AI chatbots integrate with CRMs, ERPs, databases and internal workflows to execute tasks."},
- {heading:"High-Impact Business Applications",content:"Organizations use AI chatbots for customer support automation, HR assistance, sales enablement and internal knowledge systems."},
- {heading:"Enterprise Security Requirements",content:"Role-based access control, data privacy and secure API integrations are essential for production-grade deployments."},
- {heading:"Adoption Strategy",content:"Start with one focused use case, measure performance and gradually expand into multi-department automation."}
+ {heading:"Generic vs Custom Bots",content:"Custom bots integrate with CRMs, ERPs and internal knowledge unlike basic assistants."},
+ {heading:"High Value Use Cases",content:"Support automation, HR helpdesks and sales assistants lead adoption."},
+ {heading:"Security Considerations",content:"Enterprise deployments require permissions, governance and controlled access."},
+ {heading:"Deployment Strategy",content:"Start with one workflow and expand after measuring usage and accuracy."}
  ]
 },
-
 {
  id:"ai-process-mining",
  slug:"ai-process-mining-optimization",
- category: "AI & Automation",
- categoryColor: "#4338ca",
- readTime: "10 min read",
- date: "February 2025",
- title: "AI Process Mining: Discovering Inefficiencies Hidden in Your Business Operations",
- excerpt: "Process mining reveals how your business actually operates — exposing bottlenecks, delays and inefficiencies before automation begins.",
- quote: "You cannot automate chaos — you must first understand it.",
+ category:"AI & Automation",
+ categoryColor:"#4338ca",
+ readTime:"9 min read",
+ date:"February 2025",
+ title:"AI Process Mining: Discover Hidden Inefficiencies in Your Operations",
+ excerpt:"Before automating anything, process mining reveals where bottlenecks actually exist.",
+ quote:"You cannot optimize what you have not mapped.",
  sections:[
- {heading:"What Process Mining Reveals",content:"It reconstructs real workflows from system logs to show how processes actually run versus how they are assumed to run."},
- {heading:"Identifying Operational Bottlenecks",content:"Businesses discover hidden inefficiencies such as approval delays, duplicated work and compliance gaps."},
- {heading:"Role in Automation Strategy",content:"Process mining acts as the foundation layer before implementing AI automation or workflow optimization systems."},
- {heading:"Implementation Approach",content:"Start with high-volume processes like procurement, finance approvals or customer onboarding."}
+ {heading:"What Process Mining Does",content:"It analyzes system logs to reconstruct how processes truly run."},
+ {heading:"Finding Bottlenecks",content:"Organizations uncover approval delays, duplicate work and compliance gaps."},
+ {heading:"Pairing With Automation",content:"Mining often becomes the foundation for later automation projects."},
+ {heading:"Implementation Roadmap",content:"Begin with one process such as procurement or invoicing."}
  ]
 },
 
 // ================= SCRAPING (5) =================
-
 {
  id:"scraping-price-monitoring",
  slug:"web-scraping-price-monitoring",
  category:"Data & Scraping",
  categoryColor:"#a855f7",
- readTime:"8 min read",
+ readTime:"7 min read",
  date:"April 2025",
- title:"Price Monitoring with Web Scraping for Ecommerce Competitive Intelligence",
- excerpt:"Automated price tracking helps businesses react faster to market changes and protect profit margins.",
- quote:"In ecommerce, pricing intelligence defines competitive survival.",
+ title:"Price Monitoring with Web Scraping for Ecommerce Intelligence",
+ excerpt:"Track competitors, pricing shifts and market trends automatically.",
+ quote:"If competitors change prices daily and you react weekly, you're already behind.",
  sections:[
- {heading:"Why Manual Monitoring Fails",content:"Manual tracking cannot keep up with fast-changing competitor pricing, promotions and stock fluctuations."},
- {heading:"Automated Price Intelligence Systems",content:"Scraping systems continuously collect competitor pricing, discounts and availability data across multiple platforms."},
- {heading:"Strategic Pricing Optimization",content:"Businesses use this data to dynamically adjust pricing strategies and improve profit margins."},
- {heading:"Scalable Data Infrastructure",content:"Large-scale scraping requires distributed systems, scheduling and compliance-aware architecture."}
+ {heading:"Why Manual Price Checks Fail",content:"Manual monitoring misses frequency and scale."},
+ {heading:"Scraping Competitive Pricing",content:"Automated systems gather pricing and stock data continuously."},
+ {heading:"Dynamic Pricing Opportunities",content:"Businesses use this data to optimize margins."},
+ {heading:"Compliance and Scaling",content:"Responsible scraping architecture matters as volume grows."}
  ]
 },
-
 {
  id:"real-estate-data-scraping",
  slug:"real-estate-data-scraping",
  category:"Data & Scraping",
  categoryColor:"#9333ea",
- readTime:"9 min read",
+ readTime:"8 min read",
  date:"April 2025",
- title:"Real Estate Data Scraping for Market Intelligence and Investment Insights",
- excerpt:"Real estate data extraction enables investors and agencies to identify opportunities faster and make data-driven decisions.",
- quote:"In real estate, speed of insight often determines profitability.",
+ title:"Real Estate Data Scraping for Market Intelligence and Lead Generation",
+ excerpt:"Property data scraping is reshaping real estate research and acquisition.",
+ quote:"Property intelligence belongs to whoever gathers it first.",
  sections:[
- {heading:"Types of Real Estate Data",content:"Listings, price history, rental trends, neighborhood analytics, and property ownership signals."},
- {heading:"Investor and Agency Applications",content:"Investors use data scraping for deal sourcing, while agencies generate targeted lead lists for outreach."},
- {heading:"Market Intelligence Advantage",content:"Aggregated property data helps identify undervalued assets and emerging market trends."},
- {heading:"Automation and Enrichment",content:"Scraped data is often enriched with contact and financial information to build complete intelligence systems."}
+ {heading:"What Data Can Be Collected",content:"Listings, pricing history, rent trends and ownership signals."},
+ {heading:"Investor Use Cases",content:"Investors use scraped data for deal sourcing and analysis."},
+ {heading:"Lead Generation Potential",content:"Agents generate prospect lists from public sources."},
+ {heading:"Automation Stack",content:"Scraping plus enrichment creates high-value property intelligence systems."}
  ]
 },
-
 {
  id:"job-board-scraping",
  slug:"job-board-scraping-intelligence",
  category:"Data & Scraping",
  categoryColor:"#7e22ce",
- readTime:"7 min read",
+ readTime:"6 min read",
  date:"March 2025",
- title:"Job Board Scraping as a Strategic Business Intelligence System",
- excerpt:"Job postings reveal company growth, hiring intent, and technology adoption before public announcements.",
- quote:"Hiring data is one of the earliest indicators of business strategy.",
+ title:"Job Board Scraping as a Business Intelligence Goldmine",
+ excerpt:"Hiring data reveals growth signals, technology adoption and market demand.",
+ quote:"Hiring activity often reveals strategy before press releases do.",
  sections:[
- {heading:"Why Job Data Is Valuable",content:"Job listings expose expansion plans, new technologies, budgets and departmental priorities."},
- {heading:"Sales and Lead Generation Use",content:"Sales teams use hiring signals as intent data to identify potential clients before competitors."},
- {heading:"Competitive Intelligence",content:"Monitoring competitor hiring patterns reveals strategic direction and scaling activity."},
- {heading:"Data Enrichment Strategy",content:"Job data is combined with company profiles to build high-quality B2B intelligence systems."}
+ {heading:"Why Job Data Matters",content:"Open roles reveal budgets, growth and technology direction."},
+ {heading:"Sales and Prospecting Uses",content:"Use hiring signals as intent data for outreach."},
+ {heading:"Competitive Research",content:"Track competitor expansion through hiring patterns."},
+ {heading:"Data Enrichment",content:"Combine scraped jobs data with firmographic intelligence."}
  ]
 },
-
 {
  id:"scraping-marketplaces",
  slug:"marketplace-scraping-strategies",
  category:"Data & Scraping",
  categoryColor:"#c026d3",
- readTime:"9 min read",
+ readTime:"8 min read",
  date:"March 2025",
- title:"Marketplace Scraping Strategies for Product Intelligence and Market Analysis",
- excerpt:"Marketplace data provides deep insights into product trends, pricing strategies and competitor positioning.",
- quote:"Marketplaces contain the most honest reflection of demand and competition.",
+ title:"Marketplace Scraping Strategies for Product and Seller Intelligence",
+ excerpt:"Extract insights from marketplaces for sourcing and analysis.",
+ quote:"Marketplaces hold data most businesses never analyze deeply enough.",
  sections:[
- {heading:"Seller and Product Intelligence",content:"Track seller behavior, pricing fluctuations, reviews and product positioning at scale."},
- {heading:"Demand Trend Analysis",content:"Marketplace data helps identify high-demand products and underserved niches."},
- {heading:"Competitive Benchmarking",content:"Businesses compare pricing, reviews, and listing performance against competitors."},
- {heading:"Continuous Automation Systems",content:"Scheduled scraping pipelines ensure real-time intelligence updates."}
+ {heading:"Seller Intelligence",content:"Track sellers, pricing behavior and review shifts."},
+ {heading:"Product Research",content:"Find demand trends and gaps through marketplace data."},
+ {heading:"Competitive Benchmarking",content:"Monitor product positioning at scale."},
+ {heading:"Automation Opportunities",content:"Scheduled data collection supports continuous intelligence."}
  ]
 },
-
 {
  id:"google-maps-scraping",
  slug:"google-maps-scraping-leads",
  category:"Data & Scraping",
  categoryColor:"#d946ef",
- readTime:"8 min read",
+ readTime:"7 min read",
  date:"February 2025",
- title:"Google Maps Scraping for Local Business Lead Generation at Scale",
- excerpt:"Local business data extraction enables targeted outreach and high-quality lead generation pipelines.",
- quote:"Local data is one of the most underutilized sales assets in digital marketing.",
+ title:"Google Maps Scraping for Local Business Lead Generation",
+ excerpt:"Location data can fuel powerful prospecting systems.",
+ quote:"Local business data is one of the most underused lead assets.",
  sections:[
- {heading:"Data Extraction Capabilities",content:"Business names, categories, phone numbers, websites, reviews and geographic locations."},
- {heading:"Lead Generation Applications",content:"Sales teams build segmented outreach lists based on industry, location and business size."},
- {heading:"Data Enrichment Pipelines",content:"Maps data is combined with email discovery and CRM systems for full lead automation."},
- {heading:"Scaling Outreach Systems",content:"Automated scraping enables continuous lead flow for B2B sales pipelines."}
+ {heading:"What Can Be Extracted",content:"Business contacts, categories, reviews and geographic insights."},
+ {heading:"Lead Generation Use Cases",content:"Sales teams build segmented outreach lists from local data."},
+ {heading:"Enrichment Workflows",content:"Combine maps data with email and website intelligence."},
+ {heading:"Scaling Outreach",content:"Turn local data into repeatable prospecting engines."}
  ]
 },
 
 // ================= WEB (5) =================
-// ================= WEB DEVELOPMENT (5) =================
-
 {
  id:"headless-commerce-guide",
  slug:"headless-commerce-development",
  category:"Web Development",
  categoryColor:"#10b981",
- readTime:"10 min read",
+ readTime:"9 min read",
  date:"April 2025",
  title:"Headless Commerce Development for Scalable Ecommerce Platforms",
- excerpt:"Modern ecommerce businesses are shifting toward headless architecture to improve speed, flexibility and omnichannel scalability across devices and platforms.",
- quote:"In modern ecommerce, frontend flexibility directly translates into business growth and conversion performance.",
+ excerpt:"Modern ecommerce is moving toward decoupled architecture.",
+ quote:"Frontend flexibility becomes growth leverage in ecommerce.",
  sections:[
- {heading:"What Headless Commerce Really Means",content:"Headless commerce decouples the frontend experience from the backend commerce engine, allowing businesses to deliver faster, more personalized user experiences across multiple channels."},
- {heading:"Business Advantages at Scale",content:"It enables faster page loads, better UX customization, improved mobile performance, and seamless omnichannel integration — all of which directly increase conversion rates."},
- {heading:"Modern Technology Stack",content:"Typical implementations combine Next.js or React frontends with API-driven backend systems, commerce platforms, and cloud-based infrastructure for scalability."},
- {heading:"When Businesses Should Adopt It",content:"Headless architecture is ideal for fast-growing ecommerce brands, multi-region businesses and platforms requiring high customization and performance optimization."}
+ {heading:"What Is Headless Commerce",content:"It separates frontend experiences from backend commerce engines."},
+ {heading:"Business Benefits",content:"Faster experiences and omnichannel delivery improve conversion."},
+ {heading:"Technology Stack",content:"Modern stacks often combine Next.js, APIs and commerce engines."},
+ {heading:"When to Adopt It",content:"High-growth ecommerce brands benefit most."}
  ]
 },
-
 {
  id:"progressive-web-apps",
  slug:"progressive-web-apps-business",
  category:"Web Development",
  categoryColor:"#059669",
- readTime:"8 min read",
+ readTime:"7 min read",
  date:"April 2025",
  title:"Progressive Web Apps: When a PWA Beats Native Apps",
- excerpt:"Progressive Web Apps offer app-like experiences without the cost and complexity of building separate native applications.",
- quote:"The most efficient mobile strategy is sometimes not an app but an optimized web experience.",
+ excerpt:"PWAs can reduce costs while delivering app-like experiences.",
+ quote:"Sometimes the smartest mobile strategy starts on the web.",
  sections:[
- {heading:"Core Business Benefits of PWAs",content:"PWAs combine speed, offline functionality, and installable experiences, reducing dependency on app stores and lowering development costs."},
- {heading:"Where PWAs Perform Best",content:"They are highly effective for ecommerce stores, service platforms, booking systems and content-driven businesses where speed and accessibility matter."},
- {heading:"Cost and Maintenance Advantage",content:"A single codebase reduces long-term maintenance costs and simplifies updates across all devices and platforms."},
- {heading:"Limitations and Strategic Fit",content:"PWAs are not ideal for heavy native features like advanced hardware access, so businesses must evaluate feature complexity before choosing this approach."}
+ {heading:"Core Benefits",content:"Speed, offline capability and installability are major strengths."},
+ {heading:"Use Cases",content:"Service businesses and ecommerce often benefit from PWAs."},
+ {heading:"Cost Advantages",content:"One codebase can lower maintenance complexity."},
+ {heading:"Limitations",content:"Evaluate feature requirements before choosing this route."}
  ]
 },
-
 {
  id:"api-development-guide",
  slug:"api-development-best-practices",
  category:"Web Development",
  categoryColor:"#047857",
- readTime:"9 min read",
+ readTime:"8 min read",
  date:"March 2025",
  title:"Modern API Development Best Practices for Scalable Platforms",
- excerpt:"APIs form the backbone of modern applications, and their design directly impacts scalability, security and long-term system performance.",
- quote:"A poorly designed API today becomes a scaling bottleneck tomorrow.",
+ excerpt:"API design often determines whether software scales smoothly.",
+ quote:"Poor APIs create expensive software problems later.",
  sections:[
- {heading:"Core API Design Principles",content:"Well-structured APIs require consistency, versioning strategies, and clear response patterns to ensure long-term maintainability."},
- {heading:"Security as a Foundation",content:"Authentication systems, authorization layers, rate limiting, and input validation protect systems from misuse and attacks."},
- {heading:"Performance Optimization Techniques",content:"Caching strategies, optimized queries and lightweight payload design significantly improve response times under load."},
- {heading:"Developer Experience and Documentation",content:"Clear documentation, testing tools and predictable API behavior improve adoption and reduce integration friction."}
+ {heading:"API Design Principles",content:"Consistency and versioning are foundational."},
+ {heading:"Security Essentials",content:"Authentication and rate limiting protect systems."},
+ {heading:"Performance Optimization",content:"Caching and efficient queries matter."},
+ {heading:"Documentation Strategy",content:"Great APIs require excellent developer experience."}
  ]
 },
-
 {
  id:"multi-vendor-marketplaces",
  slug:"multi-vendor-marketplace-development",
  category:"Web Development",
  categoryColor:"#34d399",
- readTime:"11 min read",
+ readTime:"10 min read",
  date:"March 2025",
  title:"Building Multi-Vendor Marketplaces: Technical and Business Blueprint",
- excerpt:"Multi-vendor marketplaces are complex ecosystems that require careful balance between users, vendors, payments and trust systems.",
- quote:"A marketplace is not a website — it is a living digital economy.",
+ excerpt:"Marketplace platforms have unique operational and engineering challenges.",
+ quote:"Marketplaces are ecosystems, not simple web apps.",
  sections:[
- {heading:"Core Marketplace Architecture",content:"Marketplaces require vendor systems, buyer interfaces, payment processing, commission logic and logistics tracking all working together seamlessly."},
- {heading:"Engineering and Scalability Challenges",content:"These systems must handle high concurrency, data consistency, and real-time updates across multiple user types."},
- {heading:"Trust, Ratings, and Moderation Systems",content:"User trust is built through transparent reviews, dispute handling systems, and fair vendor ranking algorithms."},
- {heading:"Growth and Liquidity Strategy",content:"Success depends on balancing supply and demand — ensuring both buyers and sellers remain active on the platform."}
+ {heading:"Core Marketplace Modules",content:"Vendors, payments, commissions and logistics form the core."},
+ {heading:"Architecture Decisions",content:"Scalability planning matters early."},
+ {heading:"Trust and Moderation",content:"Ratings and dispute flows are critical."},
+ {heading:"Growth Strategy",content:"Liquidity between buyers and sellers drives success."}
  ]
 },
-
 {
  id:"web-performance-optimization",
  slug:"web-performance-optimization-guide",
  category:"Web Development",
  categoryColor:"#22c55e",
- readTime:"7 min read",
+ readTime:"6 min read",
  date:"February 2025",
  title:"Web Performance Optimization That Improves SEO and Conversions",
- excerpt:"Website performance directly impacts user experience, search rankings, and revenue conversion rates.",
- quote:"Performance is not just speed — it is direct business revenue optimization.",
+ excerpt:"Site speed impacts rankings, revenue and retention.",
+ quote:"Performance is not technical polish — it's revenue optimization.",
  sections:[
- {heading:"Common Performance Bottlenecks",content:"Unoptimized images, heavy scripts, poor hosting, and inefficient code architecture are the primary causes of slow websites."},
- {heading:"Optimization Techniques",content:"Techniques like lazy loading, caching, CDN usage and code splitting significantly improve performance and responsiveness."},
- {heading:"SEO and Ranking Impact",content:"Search engines prioritize fast-loading websites, making performance optimization critical for organic growth."},
- {heading:"Business Performance Metrics",content:"Key metrics like bounce rate, conversion rate and session duration are directly influenced by website speed."}
+ {heading:"Speed Bottlenecks",content:"Images, scripts and poor architecture often cause issues."},
+ {heading:"Optimization Tactics",content:"Caching, code splitting and CDN strategies help."},
+ {heading:"SEO Impact",content:"Performance affects search visibility."},
+ {heading:"Measurement Framework",content:"Track metrics tied to business outcomes."}
  ]
 },
-// ================= MOBILE (5) =================
 
+// ================= MOBILE (5) =================
 {
  id:"flutter-business-apps",
  slug:"flutter-business-app-development",
  category:"Mobile Applications",
  categoryColor:"#f59e0b",
- readTime:"9 min read",
+ readTime:"8 min read",
  date:"April 2025",
  title:"Flutter Business Apps: Why Cross Platform Development Keeps Growing",
- excerpt:"Businesses are shifting to Flutter to reduce development costs, speed up delivery and maintain a single scalable codebase across platforms without sacrificing performance.",
- quote:"Cross-platform development is no longer a shortcut — it's a strategic engineering decision for scale and efficiency.",
+ excerpt:"Flutter continues gaining traction for fast scalable mobile products.",
+ quote:"Shipping once for multiple platforms can be a strategic advantage.",
  sections:[
- {heading:"Why Businesses Prefer Flutter",content:"Companies choose Flutter because it eliminates duplicate development for Android and iOS, significantly reducing cost, maintenance effort, and time-to-market while maintaining consistent UI/UX behavior."},
- {heading:"Real-World Product Use Cases",content:"Flutter is widely used in dashboards, fintech apps, e-commerce platforms, booking systems, and internal enterprise tools where speed and consistency are critical."},
- {heading:"Performance in Production Environments",content:"With proper architecture, Flutter apps can handle complex business logic, real-time updates, and API-heavy workflows while maintaining near-native performance."},
- {heading:"Long-Term Scalability Strategy",content:"Successful apps are designed with modular structure, clean state management and API-driven architecture to ensure future expansion without rewriting core systems."}
+ {heading:"Why Businesses Choose Flutter",content:"Speed and shared codebase reduce delivery time."},
+ {heading:"Use Cases",content:"Dashboards, marketplaces and service apps fit well."},
+ {heading:"Performance Considerations",content:"Modern Flutter apps perform strongly for many use cases."},
+ {heading:"Scaling Strategy",content:"Plan architecture before feature growth accelerates."}
  ]
 },
-
 {
  id:"on-demand-app-development",
  slug:"on-demand-app-development-models",
  category:"Mobile Applications",
  categoryColor:"#d97706",
- readTime:"8 min read",
+ readTime:"7 min read",
  date:"April 2025",
  title:"On-Demand App Development Models for Startups and Enterprises",
- excerpt:"On-demand platforms are reshaping industries by enabling instant service delivery, real-time tracking, and scalable digital marketplaces.",
- quote:"On-demand systems win because they remove friction between demand and fulfillment.",
+ excerpt:"Ride-sharing style models have expanded into many industries.",
+ quote:"Convenience-driven products win where friction exists.",
  sections:[
- {heading:"Industry-Wide Adoption of On-Demand Models",content:"From transportation and delivery to healthcare and home services, on-demand platforms are transforming traditional offline industries into scalable digital ecosystems."},
- {heading:"Core Features That Drive Success",content:"Real-time GPS tracking, instant notifications, secure payments, driver/provider apps, and admin dashboards are essential components of successful platforms."},
- {heading:"Monetization & Business Models",content:"Revenue is generated through commissions, subscription models, surge pricing, service fees, or hybrid monetization strategies depending on the business structure."},
- {heading:"Scalability & Infrastructure Planning",content:"These apps require highly scalable backend systems capable of handling peak traffic, concurrent requests, and real-time data synchronization without downtime."}
+ {heading:"Common On Demand Models",content:"Delivery, booking and service marketplaces dominate."},
+ {heading:"Key Features",content:"Real-time tracking and payments are essential."},
+ {heading:"Monetization Options",content:"Commission, subscription and hybrid models exist."},
+ {heading:"Technology Planning",content:"Scalability matters from launch."}
  ]
 },
-
 {
  id:"mobile-fintech-apps",
  slug:"fintech-mobile-app-development",
  category:"Mobile Applications",
  categoryColor:"#f97316",
- readTime:"10 min read",
+ readTime:"9 min read",
  date:"March 2025",
- title:"Fintech Mobile App Development: Security, Compliance and Scalability",
- excerpt:"Fintech applications demand enterprise-grade security, regulatory compliance, and highly reliable architecture to ensure trust and financial accuracy.",
- quote:"In financial systems, trust is not a feature — it is the product itself.",
+ title:"Fintech Mobile App Development: Security and Scale Considerations",
+ excerpt:"Financial apps require stronger architecture than average consumer apps.",
+ quote:"In fintech, trust is part of the product.",
  sections:[
- {heading:"Security as a Core Architecture Layer",content:"Fintech applications require multi-layer encryption, secure authentication systems, fraud detection mechanisms and hardened APIs to protect sensitive financial data."},
- {heading:"Essential Fintech Capabilities",content:"Core features include digital wallets, payment gateways, transaction history, KYC verification, budgeting tools and financial analytics dashboards."},
- {heading:"System Architecture for Reliability",content:"These systems must support high availability, redundancy, real-time processing, and strict audit logging to ensure financial integrity."},
- {heading:"Challenges in Scaling Fintech Products",content:"Scaling fintech platforms involves regulatory compliance, banking integrations, fraud prevention systems and continuous performance optimization under heavy transactional load."}
+ {heading:"Security Requirements",content:"Encryption and compliance are foundational."},
+ {heading:"Core Features",content:"Payments, analytics and user controls matter."},
+ {heading:"Architecture Choices",content:"Reliability and auditability drive decisions."},
+ {heading:"Growth Challenges",content:"Scaling regulated products requires careful planning."}
  ]
 },
-
 {
  id:"super-app-strategy",
  slug:"super-app-development-strategy",
  category:"Mobile Applications",
  categoryColor:"#fb923c",
- readTime:"9 min read",
+ readTime:"8 min read",
  date:"March 2025",
  title:"Super App Strategy: When Should Businesses Build One Ecosystem App?",
- excerpt:"Super apps combine multiple services into a unified ecosystem, but success depends on user demand, execution strategy, and long-term scalability planning.",
- quote:"A super app only works when it simplifies life — not when it complicates experience.",
+ excerpt:"The super app model is expanding beyond major tech giants.",
+ quote:"Retention increases when multiple services live in one ecosystem.",
  sections:[
- {heading:"Understanding the Super App Concept",content:"A super app integrates multiple services such as payments, booking, messaging, shopping and logistics into a single ecosystem to increase user retention."},
- {heading:"When Businesses Should Consider It",content:"Super apps are effective for businesses with high user engagement, repeat usage patterns and multiple service verticals under one brand."},
- {heading:"Risks of Poor Implementation",content:"Without proper planning, super apps become overloaded, slow, and confusing — leading to reduced user retention and engagement loss."},
- {heading:"Step-by-Step Expansion Strategy",content:"Successful super apps start with one core product, validate user adoption and then gradually expand into additional services based on demand."}
+ {heading:"What Defines a Super App",content:"Multiple integrated services under one product experience."},
+ {heading:"When It Makes Sense",content:"High-frequency ecosystems benefit most."},
+ {heading:"Complexity Challenges",content:"Poor execution can create bloated experiences."},
+ {heading:"Roadmap Approach",content:"Build one strong service before expanding."}
  ]
 },
-
 {
  id:"enterprise-mobile-security",
  slug:"enterprise-mobile-security-guide",
  category:"Mobile Applications",
  categoryColor:"#ea580c",
- readTime:"7 min read",
+ readTime:"6 min read",
  date:"February 2025",
- title:"Enterprise Mobile Security Essentials for Modern Applications",
- excerpt:"Mobile security is a critical business requirement that protects data, users, and operational integrity in enterprise-grade systems.",
- quote:"Security failures in mobile apps do not just break systems — they break trust permanently.",
+ title:"Enterprise Mobile Security Essentials for Modern Apps",
+ excerpt:"Security failures in mobile products can destroy trust fast.",
+ quote:"Mobile security is a business issue, not just a technical one.",
  sections:[
- {heading:"Major Mobile Security Risks",content:"Common threats include data leakage, insecure APIs, weak authentication, reverse engineering, and unauthorized access to sensitive systems."},
- {heading:"Multi-Layer Security Approach",content:"Strong enterprise apps use encryption, token-based authentication, secure storage, device integrity checks and runtime protection mechanisms."},
- {heading:"Regulatory Compliance Requirements",content:"Industries such as finance, healthcare and logistics must follow strict compliance frameworks like data protection laws and industry-specific security standards."},
- {heading:"Building Security into Architecture",content:"Security should be designed into the system from day one, not added later  ensuring long-term protection and system resilience."}
+ {heading:"Primary Threats",content:"Credential theft and insecure APIs remain risks."},
+ {heading:"Security Controls",content:"Authentication, encryption and device protections matter."},
+ {heading:"Compliance Factors",content:"Regulated industries require stronger controls."},
+ {heading:"Security by Design",content:"Embed protection early in product planning."}
  ]
 },
 
 // ================= ERP (5) =================
-
 {
  id:"erp-manufacturing-guide",
  slug:"erp-for-manufacturing",
@@ -1026,16 +946,15 @@ export const BLOG_POSTS = [
  readTime:"9 min read",
  date:"April 2025",
  title:"ERP for Manufacturing: Integrating Operations End to End",
- excerpt:"Manufacturers struggle with disconnected systems that slow production, increase waste, and reduce visibility. ERP unifies everything into one controlled flow.",
- quote:"Disconnected manufacturing systems create expensive inefficiencies that directly impact production cost and delivery time.",
+ excerpt:"Manufacturers rely on ERP to unify production, inventory and planning.",
+ quote:"Disconnected manufacturing systems create expensive inefficiencies.",
  sections:[
- {heading:"Core ERP Modules in Manufacturing",content:"Modern ERP connects inventory, production planning, procurement, and quality control into a single synchronized system, removing manual dependency gaps."},
- {heading:"Operational Impact",content:"Real-time visibility helps manufacturers reduce downtime, optimize raw material usage, and improve production scheduling accuracy."},
- {heading:"Common Implementation Challenges",content:"Most failures occur due to poor process mapping, unclear requirements, and ignoring real shop-floor workflows."},
- {heading:"Modern ERP Evolution",content:"Cloud ERP, IoT integration, and predictive analytics are transforming manufacturing into a data-driven operation."}
+ {heading:"Core ERP Modules",content:"Inventory, production and procurement are central modules."},
+ {heading:"Operational Gains",content:"ERP improves visibility and planning."},
+ {heading:"Implementation Risks",content:"Poor process mapping causes failures."},
+ {heading:"Modern ERP Trends",content:"Cloud and analytics are transforming ERP."}
  ]
 },
-
 {
  id:"custom-erp-development",
  slug:"custom-erp-development-benefits",
@@ -1044,16 +963,15 @@ export const BLOG_POSTS = [
  readTime:"8 min read",
  date:"April 2025",
  title:"Custom ERP Development vs Off-The-Shelf Solutions",
- excerpt:"Every business operates differently—choosing between custom and ready-made ERP depends on how unique your workflows are.",
- quote:"The best ERP is not the most popular one, but the one that fits your business process perfectly.",
+ excerpt:"Should businesses customize or buy standard ERP systems?",
+ quote:"The right ERP is shaped by process complexity, not software trends.",
  sections:[
- {heading:"When Custom ERP Becomes Necessary",content:"Businesses with unique workflows, multi-step approvals, or industry-specific logic often outgrow standard ERP tools quickly."},
- {heading:"Benefits of Off-The-Shelf ERP",content:"Faster setup, lower upfront cost, and pre-built modules make them suitable for simple or standardized operations."},
- {heading:"Long-Term Cost Perspective",content:"Custom ERP may cost more initially but reduces inefficiencies, manual work, and scaling limitations over time."},
- {heading:"Decision Framework",content:"The right choice depends on operational complexity, future scaling plans and integration requirements."}
+ {heading:"When Custom ERP Wins",content:"Unique workflows may require tailored systems."},
+ {heading:"Off The Shelf Advantages",content:"Faster deployment and lower initial complexity."},
+ {heading:"Cost Considerations",content:"Evaluate long-term ownership, not just upfront spend."},
+ {heading:"Decision Framework",content:"Match system choice to growth needs."}
  ]
 },
-
 {
  id:"crm-erp-integration",
  slug:"crm-erp-integration-strategy",
@@ -1062,16 +980,15 @@ export const BLOG_POSTS = [
  readTime:"7 min read",
  date:"March 2025",
  title:"CRM and ERP Integration Strategy for Unified Operations",
- excerpt:"When sales and operations are disconnected, businesses lose speed, accuracy, and customer trust.",
- quote:"Integration between CRM and ERP often delivers more value than implementing new standalone systems.",
+ excerpt:"Disconnected customer and operational systems create friction.",
+ quote:"Integration often delivers more value than new software purchases.",
  sections:[
- {heading:"Why Integration Is Critical",content:"Without integration, teams work in silos—leading to delays, duplicated data, and poor customer experience."},
- {heading:"Business Use Cases",content:"Integrated systems enable smooth order processing, accurate billing, faster fulfillment, and better customer tracking."},
- {heading:"Technical Integration Methods",content:"APIs, middleware, and event-driven architecture are commonly used to connect CRM and ERP systems."},
- {heading:"Data Governance Importance",content:"Clean, synchronized data across systems ensures accuracy in reporting and decision-making."}
+ {heading:"Why Integration Matters",content:"Data silos slow execution."},
+ {heading:"Integration Use Cases",content:"Sales, finance and fulfillment workflows benefit."},
+ {heading:"Technical Approaches",content:"APIs and middleware often enable integration."},
+ {heading:"Governance",content:"Data quality must be managed across systems."}
  ]
 },
-
 {
  id:"erp-warehouse-automation",
  slug:"erp-warehouse-automation",
@@ -1080,16 +997,15 @@ export const BLOG_POSTS = [
  readTime:"8 min read",
  date:"March 2025",
  title:"ERP Warehouse Automation for Inventory Accuracy and Speed",
- excerpt:"Manual warehouse management leads to stock errors, delays, and financial losses. ERP automation solves these challenges in real time.",
- quote:"Inventory accuracy is not just operational—it directly affects customer satisfaction and revenue.",
+ excerpt:"Warehouse automation becomes more powerful when driven through ERP.",
+ quote:"Inventory accuracy impacts both revenue and customer trust.",
  sections:[
- {heading:"Warehouse Operational Challenges",content:"Manual tracking, human error, and delayed updates cause stock mismatches and fulfillment issues."},
- {heading:"Automation Opportunities",content:"Barcode scanning, RFID systems, and real-time tracking significantly improve inventory accuracy and speed."},
- {heading:"ERP Role in Warehouse Control",content:"ERP connects procurement, storage, and dispatch processes into one coordinated system."},
- {heading:"Scalability Benefits",content:"Automated warehouses handle higher order volumes without increasing operational complexity."}
+ {heading:"Warehouse Challenges",content:"Manual inventory processes create costly errors."},
+ {heading:"Automation Opportunities",content:"Barcode systems and real-time tracking improve control."},
+ {heading:"ERP Coordination",content:"ERP ties operations together across departments."},
+ {heading:"Scaling Operations",content:"Automation supports higher throughput."}
  ]
 },
-
 {
  id:"erp-digital-transformation",
  slug:"erp-digital-transformation-roadmap",
@@ -1098,13 +1014,13 @@ export const BLOG_POSTS = [
  readTime:"10 min read",
  date:"February 2025",
  title:"ERP Digital Transformation Roadmap for Growing Enterprises",
- excerpt:"ERP is not just software—it is the backbone of full business transformation when implemented correctly.",
- quote:"Digital transformation fails when companies change tools without improving their underlying processes.",
+ excerpt:"ERP often sits at the center of broader digital transformation.",
+ quote:"Transformation fails when systems change without process change.",
  sections:[
- {heading:"Foundation of Transformation",content:"Successful ERP transformation starts with understanding and redesigning existing business processes."},
- {heading:"Phased Implementation Approach",content:"Breaking ERP deployment into phases reduces risk and ensures smoother adoption across teams."},
- {heading:"Change Management Challenges",content:"Employee resistance and lack of training are the most common reasons ERP projects fail."},
- {heading:"Measuring Real Success",content:"Success should be measured through efficiency gains, cost reduction and improved decision speed—not just system installation."}
+ {heading:"Transformation Foundations",content:"Process redesign should come before software deployment."},
+ {heading:"Phased ERP Modernization",content:"Incremental rollout reduces risk."},
+ {heading:"Change Management",content:"User adoption is often the hardest part."},
+ {heading:"Measuring Success",content:"Track operational metrics tied to business outcomes."}
  ]
 }
 
@@ -1114,15 +1030,15 @@ export const BLOG_POSTS = [
 
 // ── TEAM ─────────────────────────────────────────────────────
 export const TEAM = [
-  { id: 0, role_type: "ceo", initials: "Sajjad", name: "Sajjad Hussain", image: "ceo.jpg", gradient: "linear-gradient(135deg,#6366f1,#a855f7)", bio: "Visionary entrepreneur and AI engineer with 3+ years building AI systems at scale. My mission: eliminate repetitive work from every business through intelligent automation.", linkedin: "https://www.linkedin.com/in/sajjad-hussain-a77812278/", highlight: "AI Engineer & Entrepreneur" },
+  { id: 0, role_type: "ceo", initials: "Sajjad", name: "Sajjad Hussain", image: "sajjad.jpg", gradient: "linear-gradient(135deg,#6366f1,#a855f7)", bio: "Visionary entrepreneur and AI engineer with 3+ years building AI systems at scale. My mission: eliminate repetitive work from every business through intelligent automation.", linkedin: "https://www.linkedin.com/in/sajjad-hussain-a77812278/", highlight: "AI Engineer & Entrepreneur" },
   { id: 1, role_type: "manager", initials: "MI", name: "Mr. Abdur Raheem", role: "Project Manager", image: "abdur.jpeg", gradient: "linear-gradient(135deg,#a855f7,#ec4899)", bio: "Experienced in planning, executing and delivering projects on time and within budget while aligning with business objectives. Skilled in team leadership, risk management and stakeholder communication." },
   { id: 2, role_type: "director", initials: "AB", name: "Mrs.Javeria Ali", role: "Director of Engineering", image: "jvr.png", gradient: "linear-gradient(135deg,#06b6d4,#3b82f6)", bio: "Full-stack architect and engineering director with deep expertise in distributed systems, real-time data pipelines and cloud infrastructure. Oversees all technical delivery and engineering standards." },
   { id: 3, role_type: "team", initials: "SS", name: "Mr. Sameer Shahid", role: "Full Stack Expert", image: "sameer.jpeg", gradient: "linear-gradient(135deg,#10b981,#06b6d4)", bio: "Full-stack web developer with expertise in building scalable SaaS platforms and automation solutions. Skilled in Python, JavaScript and cloud technologies." },
   { id: 4, role_type: "team", initials: "RK", name: "Mr. Abdul Rehman", role: "Senior Mobile App Developer", image: "senior_mobile_app_developer.jpeg", gradient: "linear-gradient(135deg,#f59e0b,#f43f5e)", bio: "Full Stack Mobile App Developer with expertise in building scalable iOS and Android applications. Skilled in React Native, Flutter and cloud technologies." },
-  { id: 5, role_type: "team", initials: "LT", name: "Mr. Muhammad Imran", role: "Business Application Developer", image: "image.png", gradient: "linear-gradient(135deg,#f43f5e,#a855f7)", bio: "Business Application Developer specializing in designing and building scalable, data-driven applications that streamline operations and enhance business efficiency." },
+  { id: 5, role_type: "team", initials: "LT", name: "Mr. Muhammad Imran", role: "Business Application Developer", image: "Imran.jpeg", gradient: "linear-gradient(135deg,#f43f5e,#a855f7)", bio: "Business Application Developer specializing in designing and building scalable, data-driven applications that streamline operations and enhance business efficiency." },
   { id: 6, role_type: "team", initials: "OA", name: "Mr. Umair Ali", role: "Senior AI Engineer", image: "senior_ai_engineer.jpeg", gradient: "linear-gradient(135deg,#6366f1,#06b6d4)", bio: "Specialises in fine-tuning LLMs and deploying computer vision models to production. Full-stack architect with expertise in building scalable AI systems and data pipelines." },
-  { id: 7, role_type: "team", initials: "LS", name: "Mr. Rehmat Ali", role: "Senior UI & UX designer", image: "rehmt.png", gradient: "linear-gradient(135deg,#06b6d4,#10b981)", bio: "Fully experienced and Passionate UI/UX Designer with expertise in creating user-centered, visually engaging and functional digital interfaces. Skilled in Figma. " },
-  { id: 8, role_type: "team", initials: "LS", name: "Muhammad Javaid Jameel", role: "Cyber security expert", image: "jv.png", gradient: "linear-gradient(135deg,#06b6d4,#10b981)", bio: "Protecting digital assets through ethical security practices, vulnerability assessment and advanced cyber security solutions." },
+  { id: 7, role_type: "team", initials: "LS", name: "Mr. Rehmat Ali", role: "Senior UI & UX designer", image: "rehmat.jpeg", gradient: "linear-gradient(135deg,#06b6d4,#10b981)", bio: "Fully experienced and Passionate UI/UX Designer with expertise in creating user-centered, visually engaging and functional digital interfaces. " },
+  { id: 8, role_type: "team", initials: "LS", name: "Muhammad Javaid Jameel", role: "Cyber security expert", image: "jvd.jpeg", gradient: "linear-gradient(135deg,#06b6d4,#10b981)", bio: "Protecting digital assets through ethical security practices, vulnerability assessment and advanced cyber security solutions." },
   { id: 9, role_type: "team", initials: "LS", name: "Mr. Muhammad Zain", role: "Website Developer", image: "zain.jpeg", gradient: "linear-gradient(135deg,#06b6d4,#10b981)", bio: "Full-Stack Developer with expertise in building scalable web applications and automation solutions. Skilled in Python, JavaScript and cloud technologies." },
   { id: 10, role_type: "team", initials: "LS", name: "Mr. Noman Tabish", role: "Deep Learning Specialist", image: "Noman.jpeg", gradient: "linear-gradient(135deg,#06b6d4,#10b981)", bio: "Deep Learning Specialist skilled in building and deploying AI models using neural networks (CNNs, RNNs, Transformers) to solve complex real-world problems." },
   { id: 11, role_type: "team", initials: "Al", name: "Mr. Ali", role: "Senior Video Editor", image: "senior_video_editor_&_graphics_designer.jpeg", gradient: "linear-gradient(135deg,#06b6d4,#10b981)", bio: "Specializes in advanced video editing, motion graphics, color grading and post-production workflows. Has created compelling visual content for brands." },

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Reveal, PageHero, Counter, GradText } from '../ui/UIComponents';
-import { WHY_US } from '../../data/data';
+import { Reveal, PageHero, Counter, GradText, TeamAvatar } from '../ui/UIComponents';
+import { WHY_US, TEAM } from '../../data/data';
 import { useTheme } from '../../context/ThemeContext';
 
 export default function About() {
@@ -33,6 +33,54 @@ export default function About() {
         highlight="WE BUILD BUSINESS SYSTEMS."
         subtitle="A boutique AI engineering firm obsessed with one thing: measurable business outcomes. We eliminate manual work, automate decisions and build the systems that let ambitious businesses scale without hiring armies."
       />
+
+      {/* Founder Introduction */}
+      <section className="relative" style={{ background: theme.bg, padding: 'clamp(60px,8vw,100px) clamp(16px,5vw,40px)' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <div className="grid items-center gap-[clamp(32px,5vw,56px)]" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(min(260px,100%),1fr))' }}>
+            <Reveal>
+              <div className="relative mx-auto" style={{ maxWidth: 340 }}>
+                <div className="absolute rounded-[26px]" style={{ inset: -10, background: `linear-gradient(135deg,${theme.primary}33,${theme.accent}22)`, filter: 'blur(18px)' }} />
+                <img
+                  src="/images/sajjad-founder.jpg"
+                  alt="Sajjad Hussain — Founder & CEO, ScrapixAI"
+                  className="relative block w-full rounded-[22px]"
+                  style={{ border: `1px solid ${theme.borderColor}`, objectFit: 'cover', aspectRatio: '3/4' }}
+                />
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap font-display font-bold tracking-[.06em] text-[11px] px-4 py-1.5 rounded-full"
+                  style={{ background: theme.grad, color: '#fff', boxShadow: `0 4px 14px ${theme.primary}55` }}>
+                  FOUNDER &amp; CEO
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={.15}>
+              <div className="font-display font-semibold tracking-[.12em] mb-3.5" style={{ fontSize: 11, color: theme.primary }}>◆ MEET THE FOUNDER</div>
+              <h2 className="section-h2 mb-4">HI, I'M <GradText gradient={theme.grad}>SAJJAD HUSSAIN</GradText></h2>
+              <p className="font-body leading-[1.85] mb-4" style={{ fontSize: 'clamp(13px,2vw,15px)', color: theme.textMuted }}>
+                I'm an AI engineer and entrepreneur specializing in Python, data engineering and deep learning. I founded ScrapixAI to help businesses cut out manual work with real, production-grade AI and automation systems — not slideware or one-off scripts.
+              </p>
+              <p className="font-body leading-[1.85] mb-4" style={{ fontSize: 'clamp(13px,2vw,15px)', color: theme.textMuted }}>
+                My work sits at the intersection of automation and machine learning: building the scrapers and pipelines that collect the data, the transformations that clean it and the models that learn from it. I care about systems that hold up at scale — not demos.
+              </p>
+              <p className="font-body leading-[1.85]" style={{ fontSize: 'clamp(13px,2vw,15px)', color: theme.textMuted }}>
+                I lead every engagement personally alongside a lean, senior team — so you always know exactly who is building your system, from kickoff to launch and beyond.
+              </p>
+              <div className="flex gap-2 flex-wrap mt-6">
+                <a href="https://www.linkedin.com/in/sajjad-hussain-a77812278/" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-display font-semibold text-[12.5px] px-4 py-2 rounded-lg no-underline"
+                  style={{ background: `${theme.primary}18`, border: `1px solid ${theme.primary}35`, color: theme.primary }}>
+                  in LinkedIn
+                </a>
+                <a href="mailto:scrapixai@gmail.com"
+                  className="inline-flex items-center gap-2 font-display font-semibold text-[12.5px] px-4 py-2 rounded-lg no-underline"
+                  style={{ background: theme.bgCard, border: `1px solid ${theme.borderSubtle}`, color: theme.textSecondary }}>
+                  ✉ Email Me
+                </a>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
 
       {/* Story */}
       <section className="relative" style={{ background: theme.bg2, padding: 'clamp(60px,8vw,100px) clamp(16px,5vw,40px)' }}>
@@ -199,53 +247,49 @@ export default function About() {
         </div>
       </section>
 
+      {/* Our Team */}
+      <section className="relative" style={{ background: theme.bg2, padding: 'clamp(60px,8vw,100px) clamp(16px,5vw,40px)' }}>
+        <div className="absolute top-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg,transparent,${theme.accent}44,transparent)` }} />
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <Reveal className="text-center mb-[clamp(36px,5vw,52px)]">
+            <div className="font-display font-semibold tracking-[.12em] mb-3.5" style={{ fontSize: 11, color: theme.accent }}>◆ THE TEAM BEHIND THE SYSTEMS</div>
+            <h2 className="section-h2 mb-4">A LEAN, SENIOR <GradText gradient={`linear-gradient(135deg,${theme.accent},${theme.primary})`}>TEAM</GradText></h2>
+            <p className="font-body leading-[1.8] mx-auto" style={{ fontSize: 'clamp(13px,2vw,15px)', color: theme.textMuted, maxWidth: 560 }}>
+              Every person on your project is a specialist — AI engineers, full-stack developers, designers and automation experts working directly under my supervision, not outsourced to strangers.
+            </p>
+          </Reveal>
+          <div className="grid gap-[clamp(14px,2vw,20px)]" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(min(190px,100%),1fr))' }}>
+            {TEAM.filter(m => m.role_type !== 'ceo').map((m, i) => (
+              <Reveal key={m.id} delay={i * .06}>
+                <motion.div whileHover={{ y: -5, boxShadow: `0 10px 30px ${theme.primary}18` }}
+                  className="text-center rounded-[18px] p-[clamp(18px,2.5vw,24px)] h-full transition-all duration-300"
+                  style={{ background: theme.bgCard, border: `1px solid ${theme.borderSubtle}` }}>
+                  <div className="flex justify-center mb-3.5">
+                    <TeamAvatar member={m} size={78} />
+                  </div>
+                  <div className="font-display font-bold mb-1" style={{ fontSize: 'clamp(13px,2vw,15px)', color: theme.textPrimary }}>{m.name}</div>
+                  <div className="font-body text-[12px] font-medium" style={{ color: theme.primary }}>{m.role}</div>
+                </motion.div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="relative text-center" style={{ background: theme.bg, padding: 'clamp(60px,8vw,80px) clamp(16px,5vw,40px)' }}>
-  <div className="absolute inset-0 pointer-events-none" style={{ background: `radial-gradient(ellipse at 50% 0%,${theme.primary}10,transparent 55%)` }} />
-
-  <div className="mx-auto relative z-[1]" style={{ maxWidth: 720 }}>
-    <Reveal>
-
-      <h2 className="section-h2 mb-3.5">
-        WHY BUSINESSES <GradText gradient={theme.grad}>CHOOSE SCRAPIXAI</GradText>
-      </h2>
-
-      <p className="font-body leading-[1.8] mb-7" style={{ fontSize: 'clamp(13px,2vw,15px)', color: theme.textMuted }}>
-        We don’t just deliver projects — we build automation systems that replace manual work, reduce costs, and scale operations intelligently.
-      </p>
-
-      <div className="grid gap-3 mb-8 text-left mx-auto" style={{ maxWidth: 520 }}>
-        <div style={{ color: theme.textMuted }}>✔ Production-ready systems, not prototypes</div>
-        <div style={{ color: theme.textMuted }}>✔ Built for scalability and long-term ROI</div>
-        <div style={{ color: theme.textMuted }}>✔ Real automation that replaces manual processes</div>
-        <div style={{ color: theme.textMuted }}>✔ Trusted by businesses across multiple industries</div>
-      </div>
-
-      <div className="mb-6 text-[13px]" style={{ color: theme.textMuted }}>
-        Strategy-first approach • Zero-obligation consultation • Focus on measurable outcomes
-      </div>
-
-      <div className="flex gap-3.5 justify-center flex-wrap">
-        <Link to="/case-studies" className="btn-ghost">
-          Explore Our Work
-        </Link>
-
-        <motion.a 
-          href="https://wa.me/923246664914" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          whileHover={{ y: -2, scale: 1.02 }} 
-          whileTap={{ scale: 0.97 }} 
-          className="btn-primary" 
-          style={{ fontSize: 15, padding: '15px 36px' }}
-        >
-          🚀 Get Automation Roadmap
-        </motion.a>
-      </div>
-
-    </Reveal>
-  </div>
-</section>
+        <div className="absolute inset-0 pointer-events-none" style={{ background: `radial-gradient(ellipse at 50% 0%,${theme.primary}10,transparent 55%)` }} />
+        <div className="mx-auto relative z-[1]" style={{ maxWidth: 600 }}>
+          <Reveal>
+            <h2 className="section-h2 mb-3.5">READY TO WORK <GradText gradient={theme.grad}>TOGETHER?</GradText></h2>
+            <p className="font-body leading-[1.8] mb-7" style={{ fontSize: 'clamp(13px,2vw,15px)', color: theme.textMuted }}>Free 45-minute consultation. We'll find your top automation wins — no pitch, no obligation.</p>
+            <div className="flex gap-3.5 justify-center flex-wrap">
+              <motion.a href="https://wa.me/923246664914" target="_blank" rel="noopener noreferrer" whileHover={{y:-2,scale:1.02}} whileTap={{scale:.97}} className="btn-primary" style={{ fontSize: 15, padding: '15px 36px' }}>💬 Book Free Consultation →</motion.a>
+              <Link to="/portfolio" className="btn-ghost">View Our Work</Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
     </>
   );
 }
